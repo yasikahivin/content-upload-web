@@ -1,12 +1,13 @@
-<div>
-    <div>
+<div class="container">
+    <div class="element">
         <div>
-            <h1>Hello,  (Jonhn)..</h1>
+            <h1>Hello, <a class="text-green">(Jonhn)..</a></h1>
             <p> Hope you are keeping well,Please check details below</p>
-            
+
             <div>
                 Hospital Visited
                 <!--dynamic-->
+                <br>
                 <select name="hospital" id="hospital">
                     <option value="baptis-health">Baptis Health</option>
                     <option value="opt2">option 2</option>
@@ -14,22 +15,28 @@
                     <option value="opt4">option 4</option>
                 </select>
             </div>
+            <br>
+            <br>
             <div>
                 Admitted for
                 <!--dynamic-->
+                <br>
                 <div>
                     <input type="checkbox" id="cardiology" name="cardiology" value="cardiology">
                     <label for="cardiology"> Cardiology</label>
-                </div>
-                <div>
+                
                     <input type="checkbox" id="intensiveCare" name="intensiveCare" value="intensiveCare">
                     <label for="intensiveCare"> Intensive care</label><br>
                 </div>
-                
+
 
             </div>
         </div>
-        <a routerLink="/start" class="button">Back</a>
-        <a routerLink="/type" class="button">Next</a>
+        <br>
+        <br>
+        <div class="button-container">
+            <a routerLink="/start" class="button back-button">Back</a>
+            <a routerLink="/type"class="button" >Next</a>
+        </div>
     </div>
 </div>
