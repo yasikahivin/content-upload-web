@@ -17,9 +17,9 @@ export class AddContentFileUploadComponent implements OnInit {
     ngOnInit(): void {
     }
     
-    onChange(event: { target: { files: (File | null)[]; }; }) {
-        this.file = event.target.files[0];
-    }
+    // onChange(event) {
+    //     this.file = event.target.files[0];
+    // }
   
     
     onUpload() {
@@ -29,10 +29,7 @@ export class AddContentFileUploadComponent implements OnInit {
           this.fileUploadService.upload(this.file).subscribe(
             (event: any) => {
                 if (typeof (event) === 'object') {
-  
-                    
                     this.shortLink = event.link;
-  
                     this.loading = false;
                 }
             }
