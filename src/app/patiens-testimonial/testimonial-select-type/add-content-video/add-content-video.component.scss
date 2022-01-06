@@ -39,18 +39,29 @@ body {
     border: 1px solid black;
   }
   
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: right;
+    padding: 10px 40px;
+  }
+  
   .button {
-    cursor: pointer;
-    display: block;
-    width: 160px;
-    border: 1px solid black;
-    font-size: 16px;
+    position: relative;
+    background-color: #000000;
+    border: none;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 10px;
+    margin: 4px 2px;
+    width: 50px;
     text-align: center;
-    padding-top: 2px;
-    padding-bottom: 4px;
-    color: white;
-    background-color: darkgreen;
+    transition-duration: 0.4s;
     text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 4px;
   }
   
   h2 {
@@ -75,4 +86,5 @@ body {
     clear: both;
     padding-top: 10px;
   }
+  
   

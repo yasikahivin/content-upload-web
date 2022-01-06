@@ -17,9 +17,9 @@ export class AddContentFileUploadComponent implements OnInit {
     ngOnInit(): void {
     }
     
-    // onChange(event) {
-    //     this.file = event.target.files[0];
-    // }
+     onChange(event:any) {
+         this.file = event.target.files[0];
+     }
   
     
     onUpload() {
