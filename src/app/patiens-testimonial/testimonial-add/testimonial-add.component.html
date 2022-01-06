@@ -6,9 +6,9 @@
 
             <div>
                 Hospital Visited
-                <!--dynamic-->
+                <!--dynamic dropdown-->
                 <br>
-                <select name="hospital" id="hospital">
+                <select class="select" name="hospital" id="hospital">
                     <option value="baptis-health">Baptis Health</option>
                     <option value="opt2">option 2</option>
                     <option value="opt3">option 3</option>
@@ -19,16 +19,48 @@
             <br>
             <div>
                 Admitted for
-                <!--dynamic-->
+                <!--dynamic checkboxes-->
                 <br>
                 <div>
-                    <input type="checkbox" id="cardiology" name="cardiology" value="cardiology">
-                    <label for="cardiology"> Cardiology</label>
-                
-                    <input type="checkbox" id="intensiveCare" name="intensiveCare" value="intensiveCare">
-                    <label for="intensiveCare"> Intensive care</label><br>
-                </div>
+                    <div class="page__section">
+                        <div class="page__toggle">
+                            <label class="toggle">
+                                <input class="toggle__input" type="checkbox" >
+                                <span class="toggle__label">
+                                    <span class="toggle__text">Cardiology</span>
+                                </span>
+                            </label>
+                        </div>
 
+                        <div class="page__toggle">
+                            <label class="toggle">
+                                <input class="toggle__input" type="checkbox" >
+                                <span class="toggle__label">
+                                    <span class="toggle__text">Intensive care</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="page__toggle">
+                            <label class="toggle">
+                                <input class="toggle__input" type="checkbox" >
+                                <span class="toggle__label">
+                                    <span class="toggle__text">Intensive care</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="page__toggle">
+                            <label class="toggle">
+                                <input class="toggle__input" type="checkbox" >
+                                <span class="toggle__label">
+                                    <span class="toggle__text">Intensive care</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
         </div>
@@ -36,7 +68,7 @@
         <br>
         <div class="button-container">
             <a routerLink="/start" class="button back-button">Back</a>
-            <a routerLink="/type"class="button" >Next</a>
+            <a routerLink="/type" class="button">Next</a>
         </div>
     </div>
 </div>
