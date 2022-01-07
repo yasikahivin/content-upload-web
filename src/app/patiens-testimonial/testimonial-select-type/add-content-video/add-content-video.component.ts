@@ -19,7 +19,7 @@ export class AddContentVideoComponent implements OnInit {
   ngOnInit(): void {
     //this.videoRef = document.getElementById('camVideo');
     this.downloadButton = document.getElementById('downloadButton');
-    this.videoPrev = document.getElementById('PrevVideo');
+    //this.videoPrev = document.getElementById('PrevVideo');
     //console.log(this.videoRef);
     //this.setupCamera();
   }
@@ -131,6 +131,10 @@ export class AddContentVideoComponent implements OnInit {
       console.log("rec4");
     };
     recorder.start(100);
+  }
+
+  playButton(){
+    console.log("play button clicked");
   }
 
   stopButton() {
