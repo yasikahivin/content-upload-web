@@ -13,8 +13,10 @@
             </div>
 
             <video id="PrevVideo" [src]="prevURL" autoplay></video>
-
-            <a id="downloadButton" class="button">
+            <a id="playButton" class="button" (click)="playButton()">
+                play
+            </a>
+            <a id="downloadButton" class="button" >
                 Download
             </a>
         </div>
