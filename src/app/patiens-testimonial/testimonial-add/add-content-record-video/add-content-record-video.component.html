@@ -1,0 +1,40 @@
+<!-- <video id="video_{{idx}}" class="video-js vjs-default-skin" playsinline></video> -->
+<div class="container">
+    <div class="element">
+        <div class="recorder-container">
+
+            <div [hidden]="isHide">
+                <video id="camVideo" autoplay width="320" height="240"></video>
+                <div class="recoder-button-container">
+                    <div id="startButton" class="rec-button" (click)="startButton()">
+                        Start
+                    </div>
+                    <div id="stopButton" class="rec-button" (click)="stopButton()">
+                        Stop
+                    </div>
+                </div>
+            </div>
+            <div [hidden]="isShow">
+                <video id="PrevVideo" [src]="prevURL" width="320" height="240" controls></video>
+                <!-- <a id="playButton" class="button" (click)="playButton()">
+                play
+            </a> -->
+                <br>
+                <div class="recoder-button-container">
+                    <a id="uploadButton" class="rec-button" (click)="uploadButton()">
+                        Upload
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+
+        <div class="button-container">
+            <a routerLink="/add/selectvideotype" class="button back-button">Back</a>
+            <a routerLink="/add/upload" class="button">Next</a>
+        </div>
+
+    </div>
+</div>

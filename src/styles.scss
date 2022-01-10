@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "inter";
+    src: local("inter"), url(./assets/fonts/Inter-Light.ttf) format("truetype");
+}
+
+* {
+    font-family: "inter";
+  }
+
+  .bold-text{
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .large-text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 44px;
+    line-height: 30px;
+  }
+
+  

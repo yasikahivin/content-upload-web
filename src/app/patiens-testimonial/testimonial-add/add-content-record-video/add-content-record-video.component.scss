@@ -1,8 +1,48 @@
-
-body {
+.container {
+    position: relative;
+    width: 30vw;
+    height: 50vh;
+    margin: auto;
+    font-family: Verdana, sans-serif;
+  }
+  
+  .element {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50vw;
+    height: 50vh;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    background: azure;
+  }
+  
+  body {
     padding: 0;
     margin: 0;
   }
+  
+  .recorder-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    padding: 10px 40px;
+  }
+  
+  .recoder-button-container{
+    display: flex;
+      flex-direction: row;
+      justify-content: left;
+      align-items: left;
+      //padding: 10px 40px;
+    }
   
   svg:not(:root) {
     display: block;
@@ -47,6 +87,23 @@ body {
     padding: 10px 40px;
   }
   
+  .rec-button {
+    position: relative;
+    background-color: #000000;
+    border: none;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 10px;
+    margin: 4px 2px;
+    width: 135px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
   .button {
     position: relative;
     background-color: #000000;
@@ -87,4 +144,7 @@ body {
     padding-top: 10px;
   }
   
+  .back-button{
+    background-color: #718096;
+  }
   

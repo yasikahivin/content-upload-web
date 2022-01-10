@@ -1,74 +1,27 @@
 <div class="container">
     <div class="element">
-        <div>
-            <h1>Hello, <a class="text-green">(Jonhn)..</a></h1>
-            <p> Hope you are keeping well,Please check details below</p>
-
-            <div>
-                Hospital Visited
-                <!--dynamic dropdown-->
-                <br>
-                <select class="select" name="hospital" id="hospital">
-                    <option value="baptis-health">Baptis Health</option>
-                    <option value="opt2">option 2</option>
-                    <option value="opt3">option 3</option>
-                    <option value="opt4">option 4</option>
-                </select>
-            </div>
-            <br>
-            <br>
-            <div>
-                Admitted for
-                <!--dynamic checkboxes-->
-                <br>
-                <div>
-                    <div class="page__section">
-                        <div class="page__toggle">
-                            <label class="toggle">
-                                <input class="toggle__input" type="checkbox" >
-                                <span class="toggle__label">
-                                    <span class="toggle__text">Cardiology</span>
-                                </span>
-                            </label>
-                        </div>
-
-                        <div class="page__toggle">
-                            <label class="toggle">
-                                <input class="toggle__input" type="checkbox" >
-                                <span class="toggle__label">
-                                    <span class="toggle__text">Intensive care</span>
-                                </span>
-                            </label>
-                        </div>
-
-                        <div class="page__toggle">
-                            <label class="toggle">
-                                <input class="toggle__input" type="checkbox" >
-                                <span class="toggle__label">
-                                    <span class="toggle__text">Intensive care</span>
-                                </span>
-                            </label>
-                        </div>
-
-                        <div class="page__toggle">
-                            <label class="toggle">
-                                <input class="toggle__input" type="checkbox" >
-                                <span class="toggle__label">
-                                    <span class="toggle__text">Intensive care</span>
-                                </span>
-                            </label>
-                        </div>
-                    </div>
-
+        <div class="add-content-sub-nav">
+            <div class="nav-tab" routerLink="/add/selectmediatype" routerLinkActive="active">
+                <div class="nav-tab-text">
+                    Select Type
                 </div>
-
+                <hr class="line">
+            </div>
+            <div class="nav-tab" routerLink="/add/record" routerLinkActive="active">
+                <div class="nav-tab-text">
+                    Add Content
+                </div>
+                <hr class="line">
+            </div>
+            <div class="nav-tab" routerLink="/add/upload" routerLinkActive="active">
+                <div class="nav-tab-text">
+                    Publish
+                </div>
+                <hr class="line">
             </div>
         </div>
-        <br>
-        <br>
-        <div class="button-container">
-            <a routerLink="/start" class="button back-button">Back</a>
-            <a routerLink="/type" class="button">Next</a>
+        <div>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

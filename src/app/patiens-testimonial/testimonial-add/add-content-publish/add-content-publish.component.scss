@@ -1,0 +1,233 @@
+.container {
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    margin: auto;
+    font-family: Verdana, sans-serif;
+  }
+  
+  .element {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50vw;
+    height: 50vh;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    background: azure;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: right;
+    padding: 10px 40px;
+  }
+  
+  .button {
+    position: relative;
+    background-color: #000000;
+    border: none;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 10px;
+    margin: 4px 2px;
+    width: 50px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .back-button{
+    background-color: #718096;
+  }
+  
+  .button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 100%;
+    padding-left: 100%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+  
+  .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+  }
+  
+  
+  .text-ash{
+      color: #718096;
+  }
+  
+  .text-green{
+      color: #006A50;
+  }
+  
+  .select{
+    margin-top: 1rem;
+    padding: 8px 12px;
+    width: 100%;
+    color: #333333;
+    background-color: #eeeeee;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+    border-radius: 5px;
+  
+    /*arrow*/
+  //   appearance: none;
+  //   -webkit-appearance: none;
+  //   -moz-appearance: none;
+   }
+  
+  .select:after {
+    content: "▼";
+    font-size: 0.8rem;
+    pointer-events: none; /* ▼ click triggers dropdown */
+    position: absolute;
+    right: 0.2rem;
+    top: 0.3rem;
+    z-index: 1;
+  }
+  
+  .select:focus,
+  .select:hover {
+    outline: none;
+    border: 1px solid #bbbbbb;
+  }
+  
+  .select option{
+    background: #ffffff;
+  }
+  
+  .toggle{
+    --uiToggleSize: var(--toggleSize, 1.25rem);
+    --uiToggleBorderWidth: var(--toggleBorderWidth, 2px);
+    --uiToggleColor: var(--toggleColor, #006A50);
+  
+    display: var(--toggleDisplay, inline-flex);
+    position: relative;
+  }
+  
+  .toggle__input{
+    width: var(--uiToggleSize);
+    height: var(--uiToggleSize);
+    opacity: 0;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+  
+  /*
+  1. Calculation of the gap for the custom checkbox
+  */
+  
+  .toggle__label{
+    display: inline-flex;
+    min-height: var(--uiToggleSize);
+    padding-left: calc(var(--uiToggleSize) + var(--toggleIndent, .4em));
+  }
+  
+  .toggle__input:not(:disabled) ~ .toggle__label{
+    cursor: pointer;
+  }
+  
+  /*
+  1. Ems helps to calculate size of the checkbox
+  */
+  
+  .toggle__label::after{
+    content: "";
+    box-sizing: border-box;  
+    width: 1em;
+    height: 1em;
+    font-size: var(--uiToggleSize); /* 1 */
+  
+    background-color: transparent;
+    border: var(--uiToggleBorderWidth) solid var(--uiToggleColor);
+  
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+  }
+  
+  .toggle__input:checked ~ .toggle__label::after{
+    background-color: var(--uiToggleColor);
+  }
+  
+  .toggle__text{
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  /*
+  The arrow size and position depends from sizes of square 
+  */
+  
+  .toggle__label::before{
+    content: "";
+    width: 0;
+    height: 0;
+    //font-size: var(--uiToggleSize); /* 1 */
+  
+    border-left-width: 0;
+    border-bottom-width: 0;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-color: var(--toggleArrowColor, #fff);
+  
+    position: absolute;
+    top: .5428em;
+    left: .25em;
+    z-index: 3;
+  
+    transform-origin: left top;
+    transform: rotate(-40deg) skew(10deg);
+  }
+  
+  .toggle__input:checked ~ .toggle__label::before{
+    --uiToggleArrowWidth: var(--toggleArrowWidth, 2px);
+  
+    width: .4em;
+    height: .2em;
+    border-left-width: var(--uiToggleArrowWidth);
+    border-bottom-width: var(--uiToggleArrowWidth);
+  }
+  
+  .page__toggle{
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+    //font-size: var(--pageToggleTextFontSize);
+  }
+  
+  .page__section{
+    display: flex;
+    flex-wrap: wrap;
+    //font-weight: 700;
+  }
+  
+  .page__section:nth-child(n+2){
+    margin-top: 3rem;
+  }
+  
+  

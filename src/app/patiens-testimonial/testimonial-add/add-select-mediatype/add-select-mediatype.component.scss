@@ -1,0 +1,114 @@
+.container {
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+    margin: auto;
+    font-family: Verdana, sans-serif;
+  }
+  
+//   .element {
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     margin: auto;
+//     width: 30vw;
+//     height: 50vh;
+//   }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    background: azure;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: right;
+    padding: 10px 40px;
+  }
+  
+  .button {
+    position: relative;
+    background-color: #000000;
+    border: none;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 10px;
+    margin: 4px 2px;
+    width: 50px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .back-button {
+    background-color: #718096;
+  }
+  
+  .type-button {
+    height: 118px;
+    width: 118px;
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    padding: 31px;
+    background: #F7FAFC;
+    border: solid #006A50 1px;
+    text-decoration: none;
+  }
+  
+  .type-button:hover {
+    background: #EEFFFB;
+    text-decoration: none;
+  }
+  .type-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
+  }
+
+  .type-button-div{
+    padding: 5px 10px;
+  }
+
+  .type-button-name{
+    text-align: center;
+  }
+  
+  .button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 100%;
+    padding-left: 100%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+  
+  .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+  }
+  
+  .text-ash {
+    color: #718096;
+  }
+  
+  .text-green {
+    color: #006a50;
+  }
+  
