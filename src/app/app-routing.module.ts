@@ -8,6 +8,8 @@ import { AddContentVideoComponent } from './patiens-testimonial/testimonial-add/
 import { TestimonialSelectTypeComponent } from './patiens-testimonial/testimonial-select-type/testimonial-select-type.component';
 import { TestimonialStartComponent } from './patiens-testimonial/testimonial-start/testimonial-start.component';
 import { AddContentRecordVideoComponent } from './patiens-testimonial/testimonial-add/add-content-record-video/add-content-record-video.component';
+import { AddContentPublishComponent } from './patiens-testimonial/testimonial-add/add-content-publish/add-content-publish.component';
+import { TestimonialEndComponent } from './patiens-testimonial/testimonial-end/testimonial-end.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'start', pathMatch: 'full' },
@@ -23,8 +25,10 @@ const routes: Routes = [
       { path: 'selectvideotype', component: AddContentVideoComponent },
       { path: 'record', component: AddContentRecordVideoComponent },
       { path: 'upload', component: AddContentFileUploadComponent },
+      { path: 'publish', component:  AddContentPublishComponent },
     ],
   },
+  { path: 'thankyou', component: TestimonialEndComponent },
 ];
 
 @NgModule({

@@ -1,79 +1,57 @@
-<div class="container">
-    <div class="element">
-        <div>
-            <a class="large-text">Hello, <a class="text-green">John..</a></a>
-            <p> Hope you are keeping well,Please check details below</p>
+<div class="logo-container-left">
+    <img class="logo" src="../../../assets/baptist health south florida logo.png">
+</div>
+<form [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
+    <div class="container">
+        <div class="element">
+            <div>
+                <a class="large-text">Hello, <a class="text-green">John..</a></a>
+                <p> Hope you are keeping well,Please check details below</p>
 
-            <div>
-                <a class="bold-text">
-                    Hospital Visited
-                </a>
-                <!--dynamic dropdown-->
+                <div>
+                    <a class="bold-text">
+                        Hospital Visited
+                    </a>
+                    <!--dynamic dropdown-->
+                    <br>
+                    <select class="select" name="hospital" id="hospital">
+                        <option value="baptis-health">Baptis Health</option>
+                        <option value="opt2">option 2</option>
+                        <option value="opt3">option 3</option>
+                        <option value="opt4">option 4</option>
+                    </select>
+                </div>
                 <br>
-                <select class="select" name="hospital" id="hospital">
-                    <option value="baptis-health">Baptis Health</option>
-                    <option value="opt2">option 2</option>
-                    <option value="opt3">option 3</option>
-                    <option value="opt4">option 4</option>
-                </select>
-            </div>
-            <br>
-            <br>
-            <div>
-                <a class="bold-text">
-                    Admitted for
-                </a>
-                <!--dynamic checkboxes-->
                 <br>
                 <div>
-                    <div class="page__section">
-                        <div class="page__toggle">
-                            <label class="toggle">
-                                <input class="toggle__input" type="checkbox">
-                                <span class="toggle__label">
-                                    <span class="toggle__text">Cardiology</span>
-                                </span>
-                            </label>
+                    <a class="bold-text">
+                        Admitted for
+                    </a>
+                    <!--dynamic checkboxes-->
+                    <br>
+                    <div>
+                        <div class="page-section">
+                            <div *ngFor="let data of AdmitedFor; let i=index">
+                            <div class="page-toggle">
+                                <label class="toggle">
+                                    <input class="toggle-input" type="checkbox" [value]="data.value"
+                                        (change)="onCheckboxChange($event)" />
+                                    <span class="toggle-label">
+                                        <span class="toggle-text">{{data.name}}</span>
+                                    </span>
+                                </label>
+                            </div>
                         </div>
-
-                        <div class="page__toggle">
-                            <label class="toggle">
-                                <input class="toggle__input" type="checkbox">
-                                <span class="toggle__label">
-                                    <span class="toggle__text">Intensive care</span>
-                                </span>
-                            </label>
-                        </div>
-
-                        <div class="page__toggle">
-                            <label class="toggle">
-                                <input class="toggle__input" type="checkbox">
-                                <span class="toggle__label">
-                                    <span class="toggle__text">Intensive care</span>
-                                </span>
-                            </label>
-                        </div>
-
-                        <div class="page__toggle">
-                            <label class="toggle">
-                                <input class="toggle__input" type="checkbox">
-                                <span class="toggle__label">
-                                    <span class="toggle__text">Intensive care</span>
-                                </span>
-                            </label>
                         </div>
                     </div>
-
                 </div>
-
+            </div>
+            <br>
+            <br>
+            <div class="button-container">
+                <a routerLink="/start" class="button back-button">Back</a>
+                <input class="button" type="submit" value="Next" [disabled]="this.form.controls['checkArray'].errors?.['required']">
             </div>
         </div>
-        <br>
-        <br>
-        <router-outlet></router-outlet>
-        <div class="button-container">
-            <a routerLink="/start" class="button back-button">Back</a>
-            <a routerLink="/add/selectmediatype" class="button">Next</a>
-        </div>
     </div>
-</div>
+</form>

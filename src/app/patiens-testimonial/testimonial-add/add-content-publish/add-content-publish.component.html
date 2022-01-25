@@ -1,79 +1,104 @@
 <div class="container">
     <div class="element">
         <div>
-            <a class="large-text">Hello, <a class="text-green">John..</a></a>
             <p> Hope you are keeping well,Please check details below</p>
 
             <div>
                 <a class="bold-text">
-                    Hospital Visited
+                    Please give us your valued consent for publishing in our mediums
                 </a>
                 <!--dynamic dropdown-->
-                <br>
-                <select class="select" name="hospital" id="hospital">
-                    <option value="baptis-health">Baptis Health</option>
-                    <option value="opt2">option 2</option>
-                    <option value="opt3">option 3</option>
-                    <option value="opt4">option 4</option>
-                </select>
+                <div>
+                    <!--dynamic checkboxes-->
+                    <br>
+                    <div>
+                        <div class="verticle_page-section">
+                            <div class="page-toggle">
+                                <label class="toggle">
+                                    <input class="toggle-input" type="checkbox">
+                                    <span class="toggle-label">
+                                        <span class="toggle-text">For Web Marketing (Website)</span>
+                                    </span>
+                                </label>
+                            </div>
+    
+                            <div class="page-toggle">
+                                <label class="toggle">
+                                    <input class="toggle-input" type="checkbox">
+                                    <span class="toggle-label">
+                                        <span class="toggle-text">For Mobile Marketing (Mobile App)</span>
+                                    </span>
+                                </label>
+                            </div>
+    
+                            <div class="page-toggle">
+                                <label class="toggle">
+                                    <input class="toggle-input" type="checkbox">
+                                    <span class="toggle-label">
+                                        <span class="toggle-text">For Digital Marketing (Digital Signage Board/s)</span>
+                                    </span>
+                                </label>
+                            </div>
+    
+                            <div class="page-toggle">
+                                <label class="toggle">
+                                    <input class="toggle-input" type="checkbox">
+                                    <span class="toggle-label">
+                                        <span class="toggle-text">Do not publish to any of the above mediums</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
             </div>
             <br>
             <br>
             <div>
                 <a class="bold-text">
-                    Admitted for
+                    Publish consent as
                 </a>
                 <!--dynamic checkboxes-->
                 <br>
                 <div>
-                    <div class="page__section">
-                        <div class="page__toggle">
+                    <div class="page-section">
+                        <div class="page-toggle">
                             <label class="toggle">
-                                <input class="toggle__input" type="checkbox">
-                                <span class="toggle__label">
-                                    <span class="toggle__text">Cardiology</span>
+                                <input class="toggle-input" type="checkbox">
+                                <span class="toggle-label">
+                                    <span class="toggle-text">John</span>
                                 </span>
                             </label>
                         </div>
 
-                        <div class="page__toggle">
+                        <div class="page-toggle">
                             <label class="toggle">
-                                <input class="toggle__input" type="checkbox">
-                                <span class="toggle__label">
-                                    <span class="toggle__text">Intensive care</span>
+                                <input class="toggle-input" type="checkbox">
+                                <span class="toggle-label">
+                                    <span class="toggle-text">Anonymous</span>
                                 </span>
                             </label>
                         </div>
-
-                        <div class="page__toggle">
+                    </div>    
+                        
+                    <div class="page-section-no-margin">
+                        <div class="page-toggle">
                             <label class="toggle">
-                                <input class="toggle__input" type="checkbox">
-                                <span class="toggle__label">
-                                    <span class="toggle__text">Intensive care</span>
+                                <input class="toggle-input" type="checkbox">
+                                <span class="toggle-label">
+                                    <span class="toggle-text">I agree to Baptist Health Terms&Conditions</span>
                                 </span>
                             </label>
-                        </div>
-
-                        <div class="page__toggle">
-                            <label class="toggle">
-                                <input class="toggle__input" type="checkbox">
-                                <span class="toggle__label">
-                                    <span class="toggle__text">Intensive care</span>
-                                </span>
-                            </label>
-                        </div>
+                        </div> 
                     </div>
-
                 </div>
-
             </div>
         </div>
         <br>
         <br>
         <router-outlet></router-outlet>
         <div class="button-container">
-            <a routerLink="/start" class="button back-button">Back</a>
-            <a routerLink="/add/selectmediatype" class="button">Next</a>
+            <a routerLink="/add/selectvideotype" class="button back-button">Back</a>
+            <a routerLink="/thankyou" class="button">Next</a>
         </div>
     </div>
 </div>

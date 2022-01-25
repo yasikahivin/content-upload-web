@@ -12,6 +12,7 @@
   border-radius: 6px;
 }
 
+
 .center-square {
   display: flex;
   flex-direction: row;
@@ -66,7 +67,7 @@
 
 .container {
   position: relative;
-  width: 30vw;
+  //width: 30vw;
   height: 50vh;
   margin: auto;
   font-family: Verdana, sans-serif;
@@ -125,10 +126,6 @@ svg:not(:root) {
   padding: 5px 10px 5px 26px;
 }
 
-body {
-  font: 14px "Open Sans", "Arial", sans-serif;
-}
-
 video {
   margin-top: 2px;
   border: 1px solid black;
@@ -160,7 +157,7 @@ video {
 }
 
 .button {
-  position: relative;
+  //position: relative;
   background-color: #000000;
   border: none;
   font-size: 15px;

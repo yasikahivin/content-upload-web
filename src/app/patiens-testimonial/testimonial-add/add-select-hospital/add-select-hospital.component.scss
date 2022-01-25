@@ -3,19 +3,20 @@
     width: 90vw;
     height: 90vh;
     margin: auto;
-    font-family: Verdana, sans-serif;
   }
   
   .element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 50vw;
-    height: 50vh;
-  }
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
   
   body {
     height: 100vh;
@@ -50,6 +51,7 @@
 
   .back-button{
     background-color: #718096;
+    color: #000000;
   }
   
   .button:after {
@@ -126,7 +128,7 @@
     position: relative;
   }
   
-  .toggle__input{
+  .toggle-input{
     width: var(--uiToggleSize);
     height: var(--uiToggleSize);
     opacity: 0;
@@ -141,13 +143,13 @@
   1. Calculation of the gap for the custom checkbox
   */
   
-  .toggle__label{
+  .toggle-label{
     display: inline-flex;
     min-height: var(--uiToggleSize);
     padding-left: calc(var(--uiToggleSize) + var(--toggleIndent, .4em));
   }
   
-  .toggle__input:not(:disabled) ~ .toggle__label{
+  .toggle-input:not(:disabled) ~ .toggle-label{
     cursor: pointer;
   }
   
@@ -155,7 +157,7 @@
   1. Ems helps to calculate size of the checkbox
   */
   
-  .toggle__label::after{
+  .toggle-label::after{
     content: "";
     box-sizing: border-box;  
     width: 1em;
@@ -171,11 +173,11 @@
     z-index: 2;
   }
   
-  .toggle__input:checked ~ .toggle__label::after{
+  .toggle-input:checked ~ .toggle-label::after{
     background-color: var(--uiToggleColor);
   }
   
-  .toggle__text{
+  .toggle-text{
     margin-top: auto;
     margin-bottom: auto;
   }
@@ -184,7 +186,7 @@
   The arrow size and position depends from sizes of square 
   */
   
-  .toggle__label::before{
+  .toggle-label::before{
     content: "";
     width: 0;
     height: 0;
@@ -205,7 +207,7 @@
     transform: rotate(-40deg) skew(10deg);
   }
   
-  .toggle__input:checked ~ .toggle__label::before{
+  .toggle-input:checked ~ .toggle-label::before{
     --uiToggleArrowWidth: var(--toggleArrowWidth, 2px);
   
     width: .4em;
@@ -214,19 +216,19 @@
     border-bottom-width: var(--uiToggleArrowWidth);
   }
 
-  .page__toggle{
+  .page-toggle{
     margin-top: 1rem;
     margin-right: 1.5rem;
     //font-size: var(--pageToggleTextFontSize);
   }
 
-  .page__section{
+  .page-section{
     display: flex;
     flex-wrap: wrap;
     //font-weight: 700;
   }
   
-  .page__section:nth-child(n+2){
+  .page-section:nth-child(n+2){
     margin-top: 3rem;
   }
 

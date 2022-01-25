@@ -1,4 +1,47 @@
-<div class="text-center">
+<div class="container">
+    <div class="element">
+        <div class="center-square">
+            <div class="square ">
+                
+                <div class="video-type-button-container">
+                    
+                    <div routerLink="/add/upload">
+
+                        <label for="file-upload" class="custom-file-upload" >
+                            Upload Video
+                        </label>
+                        <input id="file-upload" type="file" (change)="onChange($event)"/>
+
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <a routerLink="/add/selectvideotype" class="button back-button">Back</a>
+                <a routerLink="/add/publish" class="button" (click)="onUpload()">Next</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="text-center">
     <input class="form-control" type="file" (change)="onChange($event)">
 
     <button (click)="onUpload()" class="btn btn-success">
@@ -14,4 +57,4 @@
 <div class="container" *ngIf="loading">
     <h3>Loading ...</h3>
 </div>
-<a routerLink="/add/selectvideotype" class="button">Back</a>
+<a routerLink="/add/selectvideotype" class="button">Back</a> -->

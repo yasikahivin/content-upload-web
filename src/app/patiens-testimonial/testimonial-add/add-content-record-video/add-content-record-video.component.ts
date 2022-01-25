@@ -36,7 +36,6 @@ export class AddContentRecordVideoComponent implements OnInit {
     let recorder;
     this.theStream = stream;
     this.videoRef = document.getElementById('camVideo');
-    //var video = document.querySelector('video');
     this.videoRef.srcObject = stream;
     try {
       recorder = new MediaRecorder(stream, { mimeType: 'video/webm' });
@@ -44,6 +43,8 @@ export class AddContentRecordVideoComponent implements OnInit {
       console.error('Exception while creating MediaRecorder: ' + e);
       return;
     }
+
+    //Lambda for collect record chunks
 
     this.theRecorder = recorder;
     recorder.ondataavailable = (str) => {
@@ -70,14 +71,21 @@ export class AddContentRecordVideoComponent implements OnInit {
     var url = URL.createObjectURL(blob);
     console.log(url);
     this.prevURL = this.sanitizer.bypassSecurityTrustUrl(url);
+    
+    /*
+    //Download the blob
+
     var a = document.createElement('a');
-    //document.body.appendChild(a);
-    //a.style = "display: none";
     a.href = url;
     a.download = 'test.webm';
+
+    */
+
     this.isShow = !this.isShow;
     this.isHide = !this.isHide;
-    a.click();
+
+    //a.click();
+
     // setTimeout() here is needed for Firefox.
     setTimeout(function () {
       URL.revokeObjectURL(url);

@@ -7,16 +7,20 @@
   font-family: "inter";
 }
 
-.element {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 50vw;
-  height: 50vh;
+
+  .element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
+
 
 .logo-container {
   display: flex;
@@ -38,9 +42,6 @@ body {
   height: 100vh;
   display: flex;
   background: azure;
-}
-h1 {
-  text-align: center;
 }
 
 p {
@@ -103,4 +104,16 @@ p {
   font-weight: normal;
   font-size: 16px;
   line-height: 30px;
+}
+
+h1 {
+  text-align: center;
+  //width: 777px;
+}
+
+@media screen and (min-width: 1000px) {
+  h1 {
+    text-align: center;
+    width: 777px;
+  }
 }

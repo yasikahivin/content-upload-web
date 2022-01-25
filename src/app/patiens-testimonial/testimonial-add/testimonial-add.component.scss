@@ -1,48 +1,54 @@
 .container {
-    position: relative;
-    width: 90vw;
-    height: 90vh;
-    margin: auto;
-    
-  }
-  
-  .element {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 50vw;
-    height: 50vh;
-  }
+  position: relative;
+  width: 90vw;
+  height: 60vh;
+  margin: auto;
+}
 
-  .add-content-sub-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 40px;
-  }
-  .nav-tab{
-    padding: 2px 5px;
-    width: 150px;
-  }
+.element {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80vw;
+  height: 50vh;
+}
 
-  .nav-tab-text{
-    display: flex;
-    padding: 2px 20px;
-    font-style: normal;
-    font-weight: 500;
-  }
+.add-content-sub-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+}
 
-  .active{
-    color:#006A50;
-  }
+.nav-tab {
+  padding: 2px 5px;
+  width: 150px;
+}
 
- hr.line {
-    display: flex;
-    border: 1px solid #000000;
-    background:#000000;
+.nav-tab-text {
+  padding: 2px 20px;
+  font-style: normal;
+  font-weight: 500;
+  //width: 60px;
+  //height: 30px;
+}
+@media screen and (-width: 1100px) {
+  .nav-tab-text {
+    width: 60px;
+    height: 30px;
   }
-  
+}
+
+.active {
+  color: #006a50;
+}
+
+hr.line {
+  display: flex;
+  border: 1px solid #000000;
+  background: #000000;
+}

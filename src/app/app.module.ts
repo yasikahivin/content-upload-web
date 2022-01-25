@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 import { PatiensTestimonialComponent } from './patiens-testimonial/patiens-testimonial.component';
 import { TestimonialStartComponent } from './patiens-testimonial/testimonial-start/testimonial-start.component';
 import { TestimonialSelectTypeComponent } from './patiens-testimonial/testimonial-select-type/testimonial-select-type.component';
@@ -15,6 +17,7 @@ import { AddSelectHospitalComponent } from './patiens-testimonial/testimonial-ad
 import { AddSelectMediatypeComponent } from './patiens-testimonial/testimonial-add/add-select-mediatype/add-select-mediatype.component';
 import { AddContentRecordVideoComponent } from './patiens-testimonial/testimonial-add/add-content-record-video/add-content-record-video.component';
 import { AddContentPublishComponent } from './patiens-testimonial/testimonial-add/add-content-publish/add-content-publish.component';
+import { TestimonialEndComponent } from './patiens-testimonial/testimonial-end/testimonial-end.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +32,15 @@ import { AddContentPublishComponent } from './patiens-testimonial/testimonial-ad
     AddSelectHospitalComponent,
     AddSelectMediatypeComponent,
     AddContentRecordVideoComponent,
-    AddContentPublishComponent
+    AddContentPublishComponent,
+    TestimonialEndComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
